@@ -21,7 +21,7 @@ default_url = "https://caldav.hasi.it/c3si/all/"
 
 hasi_format = """\
 <div class="event">
-  <div class="date" class="center">
+  <div class="date center nanooq">
     <span class="center">
       <span class="bubble-event-day">{datetime:%a}</span>
       <span class="bubble-event-date">{datetime:%d.%m.}</span>
