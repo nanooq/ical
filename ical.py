@@ -194,7 +194,7 @@ class Calendar(object):
         data = urllib.request.urlopen(self.url).read()
         data = data.decode('utf-8')
 
-        # normalize lineends
+        # normalize line endings
         data = data.replace("\r\n", "\n")
         data = data.replace("\n\r", "\n")
         # ical continuation lines
