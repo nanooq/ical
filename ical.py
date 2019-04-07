@@ -13,7 +13,8 @@ import sys, io, subprocess, re, urllib.request
 import datetime
 import dateutil.rrule, dateutil.parser, dateutil.tz
 import uuid
-import cgi, markdown
+import markdown
+import html
 
 default_url = "file:///home/simon/src/ical/basic.ics"
 default_url = "https://calendar.google.com/calendar/ical/bhj0m4hpsiqa8gpfdo8vb76p7k%40group.calendar.google.com/public/basic.ics"
@@ -85,7 +86,7 @@ class FmtString (str):
          return self
 
       if format_spec[:5] == "html:":
-         return format_spec[5:] % cgi.escape (self)
+         return format_spec[5:] % html.escape (self)
       elif format_spec[:3] == "md:":
          return format_spec[3:] % markdown.markdown (self, safe_mode="escape")
       else:
