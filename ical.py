@@ -1,24 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding:utf8 -*-
 
-# liest den Kalender von HaSi. Bei Fragen bitte an Simon wenden.
+# Reads calendar dates from ical and creates an html based on given template.html.
 #
-# python ical.py --summary  -- Terminübersicht mit Links auf die Kalenderseite
-# python ical.py --full     -- Terminübersicht mit Beschreibungen
-#
-# Wenn keine URLs zu icals angegeben werden dann wird die URL des
-# HaSi-Kalenders genutzt.
+# python3.7 ical.py --summary  -- calendar view including links
+# python3.7 ical.py --full     -- calendar view including description
 
-import sys, io, subprocess, re, urllib.request
+import sys
+import re
+import urllib.request
 import datetime
-import dateutil.rrule, dateutil.parser, dateutil.tz
+import dateutil.rrule
+import dateutil.parser
+import dateutil.tz
 import uuid
 import markdown
 import html
 
-default_url = "file:///home/simon/src/ical/basic.ics"
-default_url = "https://calendar.google.com/calendar/ical/bhj0m4hpsiqa8gpfdo8vb76p7k%40group.calendar.google.com/public/basic.ics"
-default_url = "https://cloud.hackspace-siegen.de/calendar/hasi/master/"
 default_url = "https://caldav.hasi.it/c3si/all/"
 
 hasi_format = """\
