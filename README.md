@@ -14,3 +14,11 @@
     * `import uuid`
     * `import markdown`
     * `import html`
+
+## Uberspace
+
+* Consult: https://wiki.uberspace.de/development:python
+* `cat /etc/centos-release`
+* `pip3.6 install python-dateutil --user`
+* `pip3.6 install markdown --user`
+
