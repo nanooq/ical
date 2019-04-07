@@ -290,7 +290,7 @@ def ical_replace (m):
    if len (args) >= 2:
       url = args[1]
 
-   if not calendars.has_key (url):
+   if not url in calendars:
       calendars[url] = Calendar(url)
 
    if format == "full":
