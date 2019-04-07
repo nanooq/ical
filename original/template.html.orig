@@ -83,7 +83,7 @@
     <div class="site-nav-left">
             <ul class="nav" role="menu">
     <li class="nav-home nav-current" role="menuitem"><a href="https://chaos-siegen.de/">Home</a></li>
-    <li class="nav-kalender" role="menuitem"><a href="https://wiki.chaos-siegen.de/dokuwiki/doku.php?id=treffen">Kalender</a></li>
+    <li class="nav-kalender" role="menuitem"><a href="https://kalender.chaos-siegen.de">Kalender</a></li>
     <li class="nav-schule" role="menuitem"><a href="https://chaos-siegen.de/chaos_macht_schule/">Schule</a></li>
     <li class="nav-podcast" role="menuitem"><a href="https://podcast.chaos-siegen.de/">Podcast</a></li>
     <li class="nav-wiki" role="menuitem"><a href="https://wiki.chaos-siegen.de/">Wiki</a></li>

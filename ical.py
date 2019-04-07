@@ -246,7 +246,7 @@ class Calendar(object):
         self.eventlist = []
 
         for id, ev in self.eventdict.items():
-            ev.sort(key=lambda x: int(x.get("SEQUENCE", "0")))
+            ev.sort( key=lambda x: int(x.get("SEQUENCE", "0")))
             ev[0].set_update_events(ev[1:])
             self.eventlist.append(ev[0])
 
