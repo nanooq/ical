@@ -1,22 +1,89 @@
 <!DOCTYPE html>
 <html class="no-js">
-  <head>
-<title>HaSi e.V.</title>
-  </head>
-  <body lang="de">
-    <header>
-      <section id="Status" class="m-visible"></section>
-      <img id="Logo" class="m-hidden" src="http://status.hasi.it/image/logo.svg">
-      <section id="heading">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <title>Chaos Siegen</title>
+    <meta name="HandheldFriendly" content="True"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="https://chaos-siegen.de/assets/built/screen.css?v=fdf75e8941"/>
+
+    <meta name="description" content="Verschlüsseln, Vernetzen, Verbessern"/>
+    <link rel="shortcut icon" href="https://chaos-siegen.de/favicon.png" type="image/png"/>
+    <link rel="canonical" href="https://chaos-siegen.de/"/>
+    <meta name="referrer" content="no-referrer-when-downgrade"/>
+    <link rel="next" href="https://chaos-siegen.de/page/2/"/>
+
+    <meta property="og:site_name" content="Chaos Siegen"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Chaos Siegen"/>
+    <meta property="og:description" content="Verschlüsseln, Vernetzen, Verbessern"/>
+    <meta property="og:url" content="https://chaos-siegen.de/"/>
+    <meta property="og:image" content="https://chaos-siegen.de/content/images/2019/02/smaller-gray-resize.jpg"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Chaos Siegen"/>
+    <meta name="twitter:description" content="Verschlüsseln, Vernetzen, Verbessern"/>
+    <meta name="twitter:url" content="https://chaos-siegen.de/"/>
+    <meta name="twitter:image" content="https://chaos-siegen.de/content/images/2019/02/smaller-gray-resize.jpg"/>
+    <meta name="twitter:site" content="@chaossiegen"/>
+    <meta property="og:image:width" content="1458"/>
+    <meta property="og:image:height" content="595"/>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Chaos Siegen",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://chaos-siegen.de/favicon.png",
+                    "width": 60,
+                    "height": 60
+                }
+            },
+            "url": "https://chaos-siegen.de/",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://chaos-siegen.de/content/images/2019/02/smaller-gray-resize.jpg",
+                "width": 1458,
+                "height": 595
+            },
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://chaos-siegen.de/"
+            },
+            "description": "Verschlüsseln, Vernetzen, Verbessern"
+        }
+    </script>
+
+    <script src="view-source:https://chaos-siegen.de/public/ghost-sdk.min.js?v=fdf75e8941"></script>
+    <script>
+        ghost.init({
+            clientId: "ghost-frontend",
+            clientSecret: "a1f257692bd1"
+        });
+    </script>
+    <meta name="generator" content="Ghost 2.2"/>
+    <link rel="alternate" type="application/rss+xml" title="Chaos Siegen" href="https://chaos-siegen.de/rss/"/>
+</head>
+<body lang="de">
+<header>
+    <section id="Status" class="m-visible"></section>
+    <img id="Logo" class="m-hidden" src="http://status.hasi.it/image/logo.svg">
+    <section id="heading">
         <h1>Hasi</h1>
-      </section>
-    </header>
+    </section>
+</header>
 
 <article class="block">
-  <header>
-    
-    <h1>Termine</h1>
-  </header>  
+    <header>
+
+        <h1>Termine</h1>
+    </header>
   <!-- ical summary -->
   <!-- /ical -->
 
