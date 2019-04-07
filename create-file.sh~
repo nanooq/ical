@@ -1,0 +1,4 @@
+(venv) sammann@sacredchao:~/git/ical$ cp original/template.h
+template.hasi.html.orig  template.html.orig
+(venv) sammann@sacredchao:~/git/ical$ cp original/template.html.orig template.html
+(venv) sammann@sacredchao:~/git/ical$ python3.7 ical.py template.html
