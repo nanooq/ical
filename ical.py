@@ -18,6 +18,7 @@ import cgi, markdown
 default_url = "file:///home/simon/src/ical/basic.ics"
 default_url = "https://calendar.google.com/calendar/ical/bhj0m4hpsiqa8gpfdo8vb76p7k%40group.calendar.google.com/public/basic.ics"
 default_url = "https://cloud.hackspace-siegen.de/calendar/hasi/master/"
+default_url = "https://caldav.hasi.it/c3si/all/"
 
 hasi_format = """\
 <div class="event">
