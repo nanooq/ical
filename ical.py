@@ -291,9 +291,9 @@ def ical_replace(m):
 
 if __name__ == '__main__':
     if not sys.argv[1:]:
-        c = Calendar()
+        calendar = Calendar()
         # print (markdown.markdown (c.get_formatted (shortdesc_markdown_format)))
-        print(c.get_formatted(hasi_format))
+        print(calendar.get_formatted(hasi_format))
 
     for f in sys.argv[1:]:
         data = open(f).read()
