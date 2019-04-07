@@ -41,11 +41,11 @@ hasi_format = """\
 """
 
 shortdesc_markdown_format = """\
-* __{datetime:%d. %m. %Y}__ <a name="summary-{uid:%s}" href="/calendar/#item-{uid:%s}">{summary:%s}</a>
+* __{datetime:%d. %m. %Y}__ <a name="summary-{uid:%s}" href="#item-{uid:%s}">{summary:%s}</a>
 """
 
 longdesc_markdown_format = """\
-## <a name="item-{uid:%s}" href="/calendar/#summary-{uid:%s}">{summary:html:%s}</a>
+## <a name="item-{uid:%s}" href="#summary-{uid:%s}">{summary:html:%s}</a>
 
 {datetime:__%d. %m. %Y, %H:%M Uhr__}
 
