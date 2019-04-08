@@ -6,22 +6,24 @@
 # python3.7 ical.py --summary  -- calendar view including links
 # python3.7 ical.py --full     -- calendar view including description
 
-import sys
-import re
-import urllib.request
 import datetime
-import dateutil.rrule
-import dateutil.parser
-import dateutil.tz
-import uuid
-import markdown
 import html
+import re
+import sys
+import urllib.request
+import uuid
+
+import dateutil.parser
+import dateutil.rrule
+import dateutil.tz
+import markdown
 
 default_url = "https://caldav.hasi.it/c3si/all/"
 
-hasi_format = """\
+# noinspection SpellCheckingInspection
+special_format = """\
 <div class="event">
-  <div class="date center nanooq">
+  <div class="date center">
     <span class="center">
       <span class="bubble-event-day">{datetime:%a}</span>
       <span class="bubble-event-date">{datetime:%d.%m.}</span>
@@ -295,7 +297,7 @@ def insert_ical_to_html_code(m):
 if __name__ == '__main__':
     if not sys.argv[1:]:
         calendar = Calendar()
-        print( calendar.get_formatted( hasi_format ) )
+        print( calendar.get_formatted( special_format ) )
 
     for filename in sys.argv[1:]:
         html_page_of_last_replacement = open( filename ).read()
