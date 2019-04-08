@@ -263,16 +263,16 @@ class Calendar( object ):
 def ical_replace( m ):
     # TODO: What is m?
     args = m.group( 2 ).split()
-    format = "summary"
+    marker_type = "summary"
     limit = -1
     url = default_url
 
     if len( args ) >= 1:
         if ":" in args[0]:
-            format, limit = args[0].split( ":", 2 )
+            marker_type, limit = args[0].split( ":", 2 )
             limit = int( limit )
         else:
-            format = args[0]
+            marker_type = args[0]
 
     if len( args ) >= 2:
         url = args[1]
@@ -280,7 +280,7 @@ def ical_replace( m ):
     if not url in calendars:
         calendars[url] = Calendar( url )
 
-    if format == "full":
+    if marker_type == "full":
         txtdata = calendars[url].get_formatted( longdesc_markdown_format, limit )
     else:
         txtdata = calendars[url].get_formatted( shortdesc_markdown_format, limit )
@@ -302,7 +302,7 @@ if __name__ == '__main__':
             # \s*: 0...n unicode whitespaces
             # \b: empty string bound of a word
             # (.*?): capture group of the minimal characters found possible
-            # TODO .*?: not really sure
+            # TODO .*?: not really sure. Simon Wizardry
             r'(?ims)(<!--\s*ical\b\s*(.*?)\s*-->).*?(<!--\s*/ical\s*-->)',
             ical_replace,
             html_page_of_last_replacement )
