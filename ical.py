@@ -215,7 +215,6 @@ class Calendar( object ):
             if not l:
                 continue
 
-            extra = None
             key, value = l.split( ":", 1 )
 
             if ";" in key:
