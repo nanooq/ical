@@ -104,7 +104,7 @@ class Event( dict ):
 
     def __getitem__(self, key):
         val = super( Event, self ).get( key, None )
-        if val == None:
+        if val is None:
             tim, evt = self.get_time()[0]
             if key == 'datetime':
                 val = tim
@@ -260,7 +260,7 @@ class Calendar( object ):
         return text
 
 
-def ical_replace( m ):
+def insert_ical_to_html_code(m):
     # TODO: What is m?
     args = m.group( 2 ).split()
     marker_type = "summary"
@@ -304,7 +304,7 @@ if __name__ == '__main__':
             # (.*?): capture group of the minimal characters found possible
             # TODO .*?: not really sure. Simon Wizardry
             r'(?ims)(<!--\s*ical\b\s*(.*?)\s*-->).*?(<!--\s*/ical\s*-->)',
-            ical_replace,
+            insert_ical_to_html_code,
             html_page_of_last_replacement )
 
         if html_page_for_current_replacement != html_page_of_last_replacement:
