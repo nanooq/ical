@@ -155,7 +155,9 @@ class Event( dict ):
         else:
             return False
 
-    def get_time(self, times=[]):
+    def get_time(self, times=None):
+        if times is None:
+            times = []
         if "RECURRENCE-ID" in self:
             rec = dateutil.parser.parse( self["RECURRENCE-ID"],
                                          tzinfos=simple_tzinfos )
@@ -224,7 +226,7 @@ class Calendar( object ):
             elif key == "BEGIN":
                 inhibit = value
 
-            if inhibit == None and key in ["RRULE", "RRULE", "RDATE", "EXRULE", "EXDATE", "DTSTART"]:
+            if inhibit is None and key in ["RRULE", "RRULE", "RDATE", "EXRULE", "EXDATE", "DTSTART"]:
                 raw_rrtext = raw_rrtext + "%s:%s\n" % (key, value)
 
             if key == "END" and value == "VEVENT":
@@ -240,7 +242,7 @@ class Calendar( object ):
             elif key == "END" and value == inhibit:
                 inhibit = None
 
-            if inhibit == None and cur_event != None:
+            if inhibit is None and cur_event is not None:
                 cur_event[key] = value
 
         self.eventlist = []
