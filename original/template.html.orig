@@ -88,26 +88,33 @@
         </div>
     </header>
 
-    <article class="block">
-        <header>
-            <h1>Termine</h1>
-        </header>
+    <main id="site-main" class="site-main outer">
+        <div class="inner">
+            <article class="post-full post ">
+                <header class="post-full-header">
+                    <section class="post-full-meta">
+                        <a href="https://kalender.chaos-siegen.de">Mach mit <span class="date-divider">/</span> Herzliche Einladung</a>
+                    </section>
 
-        <article class="post">
-            <div class="post-card-content">
-                <ul>
-<!-- ical summary -->
-<!-- /ical -->
-                </ul>
-            </div>
-        </article>
+                    <h1 class="post-full-title">Kalendar</h1>
+                </header>
 
-        <hr />
+                <section class="post-full-content">
+                    <div class="post-content">
+                        <ul>
+                            <!-- ical summary -->
+                            <!-- /ical -->
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <hr />
 
 <!-- ical full -->
 <!-- /ical -->
-
-    </article>
 
     <footer class="site-footer outer">
         <div class="site-footer-content inner">

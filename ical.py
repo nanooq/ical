@@ -42,45 +42,19 @@ special_format = """\
 """
 
 shortdesc_markdown_format = """\
-<li>
-    <h2 class="post-card-title">Zeit: {datetime:%d. %m. %Y, %H:%M Uhr<br/>Raum: {location: %s} }{summary:html:%s}</h2>
-</li><!--         <a class="post-card-content-link" href="summary-{uid:%s} {description:%s}">
-            <header class="post-card-header">
-                    <span class="post-card-tags"></span>
-   
-                <h2 class="post-card-title">Zeit: {datetime:%d. %m. %Y, %H:%M Uhr<br/>Raum: {location: %s} }{summary:html:%s}</h2>
-            </header>
-                <section class="post-card-excerpt">
-                <p>{description:%s}</p>
-            </section>
-            </a>
-            <footer class="post-card-meta">
-
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        {datetime:__%d. %m. %Y, %H:%M Uhr__}
-                    </div>
-                    
-                </li>
-            </ul>
-
-            <span class="reading-time">{follow_ups:Folgetermine: %s}</span>-
-
-        </footer >
---> <!--
-* __{datetime:%d. %m. %Y}__ <a name="summary-{uid:%s}" href="#item-{uid:%s}">{summary:%s}</a>
---> 
+<li><a href="#item-{uid:%s}" name="summary-{uid:%s}">
+        {datetime:%d. %m. %Y, %H:%M Uhr} &mdash; {summary:html:%s}<span class="post-card-tags">Raum: {location: %s}</span>
+    </a>
+</li>
 """
 
 longdesc_markdown_format = """\
 <article class="post-card post ">
-    <a class="post-card-image-link" href="item-{uid:%s}">
+    <a class="post-card-image-link" href="#summary-{uid:%s}" name="item-{uid:%s}">
         <div class="post-card-image" style="background-image: url(https://images.unsplash.com/photo-1526892523967-3e939630b835?ixlib&#x3D;rb-1.2.1&amp;q&#x3D;80&amp;fm&#x3D;jpg&amp;crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;w&#x3D;1080&amp;fit&#x3D;max&amp;ixid&#x3D;eyJhcHBfaWQiOjExNzczfQ)"></div>
     </a>
     <div class="post-card-content">
-        <a class="post-card-content-link" href="item-{uid:%s} {description:%s}">
+        <a class="post-card-content-link" href="#summary-{uid:%s}" name="item-{uid:%s}">
             <header class="post-card-header">
                 <span class="post-card-tags">Zeit: {datetime:%d. %m. %Y, %H:%M Uhr<br/>Raum: {location: %s} }</span>
                 <h2 class="post-card-title">{summary:html:%s}</h2>
@@ -90,19 +64,7 @@ longdesc_markdown_format = """\
             </section>
         </a>
         <footer class="post-card-meta">
-
-            <ul class="author-list">
-                <li class="author-list-item">
-
-                    <div class="author-name-tooltip">
-                        {datetime:__%d. %m. %Y, %H:%M Uhr__}
-                    </div>
-
-                </li>
-            </ul>
-
             <span class="reading-time">{follow_ups:Folgetermine: %s}</span>-
-
         </footer>
     </div>
 </article>
