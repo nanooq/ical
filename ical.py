@@ -54,7 +54,7 @@ longdesc_markdown_format = """\
     <div class="post-card-content">
         <a class="post-card-content-link" href="item-{uid:%s} {description:%s}">
             <header class="post-card-header">
-                <span class="post-card-tags">{datetime:__%d. %m. %Y, %H:%M Uhr__} {location:_Ort:_ %s}</span>
+                <span class="post-card-tags">Zeit: {datetime:%d. %m. %Y, %H:%M Uhr<br/>Raum: {location: %s} }</span>
                 <h2 class="post-card-title">{summary:html:%s}</h2>
             </header>
             <section class="post-card-excerpt">
