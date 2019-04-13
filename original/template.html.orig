@@ -92,13 +92,20 @@
         <header>
             <h1>Termine</h1>
         </header>
-        <!-- ical summary -->
-        <!-- /ical -->
+
+        <article class="post">
+            <div class="post-card-content">
+                <ul>
+<!-- ical summary -->
+<!-- /ical -->
+                </ul>
+            </div>
+        </article>
 
         <hr />
 
-        <!-- ical full -->
-        <!-- /ical -->
+<!-- ical full -->
+<!-- /ical -->
 
     </article>
 
